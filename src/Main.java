@@ -38,6 +38,15 @@ public class Main {
      * based on a condition. The loop initializes a counter (i), sets a condition for the loop to continue running,
      * and increments the counter after each iteration. This loop prints the value of the counter during each iteration.
      * <p>
+     * 7. `printIfStatement()` - Demonstrates the use of if statements in Java.
+     * This method showcases how conditional statements (if statements) are used to execute code blocks based on certain conditions.
+     * It introduces the concept of comparing variable values and executing code only when the condition is true.
+     * <p>
+     * 8. `printElseStatement()` - Demonstrates the use of if-else statements and a while loop in Java.
+     * This method showcases two fundamental control flow mechanisms in Java: conditional statements (if-else) and loops (while).
+     * It first demonstrates an if-else statement to check a condition and execute different blocks of code based on the result.
+     * Then, it uses a while loop to perform repetitive actions with an embedded if-else statement to demonstrate condition checking within the loop.
+     * <p>
      * These methods together provide a basic introduction to some of the fundamental concepts in Java programming.
      *
      * @param args an array of command-line arguments for the application
@@ -49,6 +58,8 @@ public class Main {
         printStringDataType();
         printWhileLoop();
         printForLoop();
+        printIfStatement();
+        printElseStatement();
     }
 
     private static void printSingleLineComment() {
@@ -189,5 +200,77 @@ public class Main {
 
             // System.out.println("Value: " + i); // This line is commented out to demonstrate an alternative printing method.
         }
+    }
+
+    /**
+     * Demonstrates the use of if statements in Java.
+     * <p>
+     * This method showcases how conditional statements (if statements) are used to execute code blocks based on certain conditions.
+     * It introduces the concept of comparing variable values and executing code only when the condition is true.
+     * </p>
+     * <p>
+     * Note: There is also a concept of "else" that can be used with "if" to execute code when the condition is false. This will be covered in the next section.
+     * </p>
+     */
+    private static void printIfStatement() {
+        // Initialize a variable 'myInt' with the value 0.
+        int myInt = 0;
+
+        // First if statement: checks if 'myInt' is equal to 4.
+        // Since 'myInt' is initialized with 0, this condition is false, and the code inside this block will not execute.
+        if (myInt == 4) {
+            System.out.println("The value of myInt is 4.");
+        }
+
+        // Second if statement: checks if 'myInt' is equal to 0.
+        // This condition is true because 'myInt' is indeed 0. Therefore, the code inside this block will execute, printing the message.
+        if (myInt == 0) {
+            System.out.println("The value of myInt is 0.");
+        }
+    }
+
+    /**
+     * Demonstrates the use of if-else statements and a while loop in Java.
+     * <p>
+     * This method showcases two fundamental control flow mechanisms in Java: conditional statements (if-else) and loops (while).
+     * It first demonstrates an if-else statement to check a condition and execute different blocks of code based on the result.
+     * Then, it uses a while loop to perform repetitive actions with an embedded if-else statement to demonstrate condition checking within the loop.
+     * </p>
+     */
+    private static void printElseStatement() {
+        // Initialize a variable 'myInt' with the value 0.
+        int myInt = 0;
+
+        // If-else statement to check if 'myInt' equals 4.
+        // If the condition is true, it prints "The value of myInt is 4."
+        // Otherwise, it prints "The value of myInt is not 4."
+        if (myInt == 4) {
+            System.out.println("The value of myInt is 4.");
+        } else {
+            // This block is executed because 'myInt' is not 4.
+            System.out.println("The value of myInt is not 4.");
+        }
+        // This line is printed regardless of the if-else outcome because it's outside the if-else block.
+        System.out.println("This line is always printed because it is outside the if-else block.");
+
+        // Initialize a loop control variable 'loops' with 0.
+        int loops = 0;
+
+        // A while loop that continues as long as 'loops' is less than 5.
+        while (loops < 5) {
+            // Prints the current iteration number.
+            System.out.println("Loop iteration: " + loops);
+
+            // Inside the loop, an if-else statement checks if 'loops' equals 3.
+            // It prints a specific message if true, and a different one if false.
+            if (loops == 3) {
+                System.out.println("Loop iteration is 3.");
+            } else {
+                System.out.println("Loop iteration is not 3.");
+            }
+            // Increment 'loops' to avoid an infinite loop.
+            loops++;
+        }
+        // The while loop ends when 'loops' reaches 5.
     }
 }
