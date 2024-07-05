@@ -28,6 +28,11 @@ public class Main {
      * 4. `printStringDataType()` - Focuses on the String data type, which is not primitive but is widely used in Java.
      * This method demonstrates how Strings are used to store and manipulate text.
      * <p>
+     * 5. `printWhileLoop()` - Demonstrates the use of a while loop in Java.
+     * This method showcases how a while loop can be used to execute a block of code repeatedly
+     * as long as a given condition is true. It's a fundamental concept in programming that allows
+     * for repetitive tasks to be performed with minimal code.
+     * <p>
      * These methods together provide a basic introduction to some of the fundamental concepts in Java programming.
      *
      * @param args an array of command-line arguments for the application
@@ -37,6 +42,7 @@ public class Main {
         printMultiLineComment();
         printDataTypes();
         printStringDataType();
+        printWhileLoop();
     }
 
     private static void printSingleLineComment() {
@@ -123,5 +129,31 @@ public class Main {
         System.out.println("\n");
         System.out.println("String Concatenation in Java");
         System.out.println("Concatenating Strings: " + fullName);
+    }
+
+    /**
+     * Demonstrates the use of a while loop in Java.
+     * This method showcases how a while loop can be used to execute a block of code repeatedly
+     * as long as a given condition is true. It's a fundamental concept in programming that allows
+     * for repetitive tasks to be performed with minimal code.
+     */
+    private static void printWhileLoop() {
+        // Initialize a variable 'value' with 0. This variable will be used to control the loop.
+        int value = 0;
+
+        // The while loop starts. It will continue to loop as long as 'value' is less than 10.
+        while (value < 10) {
+            // Prints the current value of 'value' to the console.
+            System.out.println("Value: " + value);
+            // Increments 'value' by 1. This is crucial to ensure the loop eventually ends.
+            // Without this increment, the loop would continue indefinitely, resulting in an infinite loop.
+            value++;
+            //^ This is equivalent to writing 'value = value + 1;'
+            // You can also use the shorthand 'value += 1;' to achieve the same result.
+            // The '++' operator is a shortcut for incrementing a variable by 1.
+        }
+        // Once 'value' reaches 10, the condition (value < 10) becomes false, and the loop exits.
+        // The method then completes its execution.
+        System.out.println("Loop completed.");
     }
 }
