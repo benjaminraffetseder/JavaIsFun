@@ -33,6 +33,11 @@ public class Main {
      * as long as a given condition is true. It's a fundamental concept in programming that allows
      * for repetitive tasks to be performed with minimal code.
      * <p>
+     * 6. `printForLoop()` - Demonstrates the use of a for loop in Java to print numbers from 0 to 9.
+     * This method uses a for loop, a control flow statement that allows code to be executed repeatedly
+     * based on a condition. The loop initializes a counter (i), sets a condition for the loop to continue running,
+     * and increments the counter after each iteration. This loop prints the value of the counter during each iteration.
+     * <p>
      * These methods together provide a basic introduction to some of the fundamental concepts in Java programming.
      *
      * @param args an array of command-line arguments for the application
@@ -43,6 +48,7 @@ public class Main {
         printDataTypes();
         printStringDataType();
         printWhileLoop();
+        printForLoop();
     }
 
     private static void printSingleLineComment() {
@@ -155,5 +161,33 @@ public class Main {
         // Once 'value' reaches 10, the condition (value < 10) becomes false, and the loop exits.
         // The method then completes its execution.
         System.out.println("Loop completed.");
+    }
+
+    /**
+     * Demonstrates the use of a for loop in Java to print numbers from 0 to 9.
+     * <p>
+     * This method uses a for loop, a control flow statement that allows code to be executed repeatedly
+     * based on a condition. The loop initializes a counter (i), sets a condition for the loop to continue running,
+     * and increments the counter after each iteration. This loop prints the value of the counter during each iteration.
+     * </p>
+     * <p>
+     * The method also demonstrates the difference between System.out.println and System.out.printf for printing output.
+     * - System.out.println prints the given message followed by a newline character, moving the cursor to the next line.
+     * - System.out.printf allows for formatted output, where you can specify the type of data being printed and format it accordingly.
+     * </p>
+     * <p>
+     * In the printf statement, "%d" is a format specifier that indicates an integer value will be printed in its place.
+     * The "\n" is a newline character, which moves the cursor to the next line after printing the current line.
+     * </p>
+     */
+    private static void printForLoop() {
+        // Initializes the loop variable 'i' and sets the loop to run as long as 'i' is less than 10.
+        // After each iteration, 'i' is incremented by 1.
+        for (int i = 0; i < 10; i++) {
+            // Prints the value of 'i' using formatted output. '%d' is replaced by the value of 'i', and '\n' adds a new line after the output.
+            System.out.printf("Value: %d\n", i);
+
+            // System.out.println("Value: " + i); // This line is commented out to demonstrate an alternative printing method.
+        }
     }
 }
